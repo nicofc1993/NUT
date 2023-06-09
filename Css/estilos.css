@@ -83,10 +83,10 @@ div .caja1{
 }
 .negro{
     color: black;
-    border-right: outset 4px black;
-    border-bottom: outset 4px black;
-    border-left: outset 4px black;
-    border-top: outset 4px black;
+    border-right: outset 0.4rem black;
+    border-bottom: outset 0.4rem black;
+    border-left: outset 0.4rem black;
+    border-top: outset 0.4rem black;
 }
 .textonut{
     color: white;
@@ -163,21 +163,24 @@ h6{
 }
 .cajamapa2{
     top: 100px;
-    width: 500px;
     height: 300px;
-    background-color: white;
+    border-radius:2rem;
+    border-style:ridge;
+    border-color:#b69121;
     display:block;
     text-align: center;
-    margin-left: 700px;
-    margin-top: 50px;
+    background: radial-gradient(circle,white,black);
 }
 .cajamapa{
-    width: 500px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     background-color: #000000;
-    display: block;
-    margin-left: 650px;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+.dirigitecontacto{
+    font-size: 4rem;
+    text-align: center;
 }
 .correr{
     position: sticky;
@@ -209,7 +212,7 @@ h6{
 @media screen and (max-width: 500px){
     .contenedorpagina{
         grid-template-columns: 1fr; 
-        grid-template-rows: 0.25fr 0.2fr 0.8fr 0.80fr 0.fr;
+        grid-template-rows: 0.25fr 0.2fr 0.8fr 0.8fr 0.25fr;
         grid-template-areas:
         "encabezado"
         "menu"
@@ -222,15 +225,18 @@ h6{
         align-items: center;
         display: flex;
         flex-direction: column;
+        padding-left: 5px;
     }
     li{
         display: block;
-        padding-top: 1px;
+        padding-top: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .caja1{
         margin: 0;
         padding: 0;
-        width: 75%;
+        width: 100%;
         max-width: 1000px;
         min-width: 320px;
     }
@@ -238,11 +244,11 @@ h6{
         padding: 0.5rem;
     }
     .caja2{
-        width: 75%;
+        width: 100%;
         max-width: 1000px;
         min-width: 320px;
         margin: 0;
-        height: 450px;
+        height: 500px;
     }
     h3{
         font-size: 5rem;
@@ -331,29 +337,59 @@ h6{
     }
 }
 @media screen and (max-width: 500px){
-    
-    
+    .contenedorservicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.25fr 3fr 0.1fr;
+        grid-template-areas: 
+        "gridencabezado"
+        "gridmenu"
+        "contenido"
+        "footer";
+    }
+    .gridcontenido{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr;
+        grid-template-areas: 
+        "titulo"
+        "video"
+        "lista";
+    }
+    .colordelalista{
+        font-size: 1.5rem;
+    }
 }
-
-
-
-
-
+.contenedorcontacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 2fr 0.1fr;
+    grid-template-areas:
+    "encabezado encabezado"
+    "navegador navegador"
+    "contenido contenido"
+    "footerc footerc";
+}
+.encabezadocontacto{
+    grid-area: encabezado;
+}
+.menucontacto{
+    grid-area: navegador;
+}
+.contenidocontacto{
+    grid-area: contenido;
+}
+.footercontacto{
+    grid-area: footerc;
+}
 
 /*galeria con Bootstrap*/
 .clasebody{
     background-color: #000000;
     font-family: "fuente";
 }
-
 .clasenut{
-    background-position: center;
     color: #b69121;
-    text-decoration:underline;
-    background-repeat: repeat;
-    text-align: center;
     font-size: 16rem;
-    background-size: 220px;
+    background-size: 222px;
 }
 .fuentegaleria{
     font-size: 5rem;
@@ -363,7 +399,75 @@ h6{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 .negro{
     text-decoration-line: none;
+}
+@media screen and (max-width: 768px){
+    .containergaleria{
+        height: 100%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    .navegadorgaleria{
+        padding: 0%;
+        margin: 0%;
+    }
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*Sumate a nut con bootstrap*/
+.fuentesumate{
+    font-size: 5rem;
+    color: #000000;
+}
+.sumateanut{
+    justify-content: center;
+}
+.botones{
+    text-align: center;
+}
+.sumateimagen img{
+    border-radius: 500px;
+    border-style:ridge;
+    border-color: #b69121;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.clasebody{
+    color: #b69121;
+    font-size: 2rem;
+}
+@media screen and (max-width: 500px){
+    .navegadorsumate{
+        padding: 0%;
+        margin: 0%;
+    }
+    .negro{
+        text-decoration: none;
+        margin: 0%;
+        padding: 0%;
+    }
+    li{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+.negro:hover{
+    color: black;
+}
+.piedepag3:hover{
+    color: blue;
+}
+.piedepag2:hover{
+    color: rgb(35, 255, 35);
+}
+.piedepag1:hover{
+    color: rgb(247, 38, 143);
 }
