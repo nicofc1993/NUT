@@ -1,0 +1,477 @@
+@import "variables";
+
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: $colordefondo;
+    font-family: "fuente";
+    @font-face {
+        font-family:"fuente";
+        src: url(../Fuentes/Macondo-Regular.ttf);
+    }
+}
+h1{
+    background-image: url(../Imagenes/imagen\ nut.jpg);
+    background-position: center;
+    color: $colorprincipal;
+    text-decoration:underline;
+    background-repeat: repeat;
+    background-size:220px;
+    text-align: center;
+    font-size: $medidatutilos;
+}
+nav{text-align: right;
+    font-size: 2.5rem;
+    background-color: $colorprincipal;
+    font-weight: bold;
+    li{
+        display: inline;
+        .negro{
+            color: black;
+            border-right: outset 0.4rem black;
+            border-bottom: outset 0.4rem black;
+            border-left: outset 0.4rem black;
+            border-top: outset 0.4rem black;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+H4{
+    background-color: $colorprincipal;
+    background-size: cover;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 0px;
+    text-decoration: underline;
+}
+.caja1{
+    background-color: rgb(0, 0, 0);
+    height: 500px;
+    width: 510px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 30%;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h3{
+        font-size: 7rem;
+        color: $colortitulos;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        font-family: 'Macondo', cursive;
+    }
+    .textonut{
+        color: $colortitulos;
+        font-size: 2rem;
+        padding: 50px;
+    }
+    .textonut2{
+        color: white;
+        font-size: 2rem;
+    }
+}
+.caja2{
+    background-image: url(../Imagenes/nut.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50rem;
+    height: 65rem;
+    margin: 0 auto;
+    display: inline-block;
+}
+footer{
+    background-color: $colorprincipal;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    section{
+        display: inline;
+        .logopie{
+            width: 100px;
+        }
+        .logoredes{
+            width: 22px;
+        }
+        .piedepag1{
+            color: rgb(247, 38, 143);
+        }
+        .piedepag2{
+            color: rgb(35, 255, 35);
+        }
+        .piedepag3{
+            color: blue;
+        }
+    }
+    .piedepag{
+        color: #000000;
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+    }
+}
+.h3s{
+    font-size: 4rem;
+    color: $colortitulos;
+    font-family: 'Macondo', cursive;
+    text-align: center;
+}
+/*grid -- tamaño tablet - 768px y tamaño celular 500px INICIO*/  
+.contenedorpagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 2fr 0.1fr;
+    grid-template-areas:
+    "encabezado encabezado"
+    "menu menu"
+    "texto imagen"
+    "footer footer";
+}
+@media screen and (max-width: 768px){ 
+    .contenedorpagina{
+        grid-template-columns: 384px 384px;
+        grid-template-rows: 0.25fr 0.25fr 1fr 1fr 0.1fr;
+        grid-template-areas:
+        "encabezado encabezado"
+        "menu menu"
+        "texto texto"
+        "imagen imagen"
+        "footer footer";
+    }
+}
+@media screen and (max-width: 500px){
+    .contenedorpagina{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.25fr 0.2fr 0.8fr 0.8fr 0.25fr;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "texto"
+        "imagen"
+        "footer"
+    }
+    .negro{
+        border-top: outset 4px black;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+    }
+    li{
+        display: block;
+        padding-top: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .caja1{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 1000px;
+        min-width: 320px;
+    }
+    .textonut{
+        padding: 0.5rem;
+    }
+    .caja2{
+        width: 100%;
+        max-width: 1000px;
+        min-width: 320px;
+        margin: 0;
+        height: 500px;
+    }
+    h3{
+        font-size: 5rem;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.encabezado1{
+    grid-area: encabezado;
+}
+.menu1{
+    grid-area: menu;
+}
+.caja1{
+    grid-area: texto;
+}
+.caja2{
+    grid-area: imagen;
+}
+.footer1{
+    grid-area: footer;
+}
+
+/* SERVICIOS */
+
+.colordelalista{
+    color: #b69121;
+    font-size: 3rem;
+    .serv{
+        display: flex;
+        justify-content: center;
+    }
+}
+h2{
+    color: #b69121;
+    text-align: center;
+}
+.formulario{
+    color:#b69121;
+    font-size: 2rem;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+}
+
+/* CONTACTO */
+
+.cajamapa2{
+    top: 100px;
+    height: 300px;
+    border-radius:2rem;
+    border-style:ridge;
+    border-color: $colorprincipal;
+    display:block;
+    text-align: center;
+    background: radial-gradient(circle,white,black);
+    .loguito{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.dirigitecontacto{
+    font-size: 4rem;
+    text-align: center;
+    color: $colortitulos;
+}
+.cajamapa{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #000000;
+    padding-bottom: 2rem;
+}
+label{
+    display: block;
+}
+article{
+    display: inline;
+}
+h6{
+    color: $colorprincipal;
+    font-size: 2rem;
+}
+/*grid -- tamaño tablet - 768px y tamaño celular 500px SERVICIOS*/  
+.contenedorservicios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.25fr 0.25fr 2fr 0.1fr;
+    grid-template-areas:
+    "gridencabezado gridencabezado"
+    "gridmenu gridmenu"
+    "contenido contenido"
+    "footer footer";
+}
+.gridencabezado{
+    grid-area: gridencabezado;
+}
+.gridmenu{
+    grid-area: gridmenu;
+}
+.gridcontenido{
+    grid-area: contenido;
+}
+.gridfooter{
+    grid-area: footer;
+}
+.gridcontenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "video lista"
+}
+.tituloservicios{
+    grid-area: titulo ;
+}
+.videonut{
+    grid-area: video;
+    display: flex;
+    justify-content: center;
+}
+.listanut{
+    grid-area: lista;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 768px ){
+    .contenedorservicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.25fr 3fr 0.1fr;
+        grid-template-areas: 
+        "gridencabezado"
+        "gridmenu"
+        "contenido"
+        "footer";
+    }
+    .gridcontenido{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr;
+        grid-template-areas: 
+        "titulo"
+        "video"
+        "lista";
+    }
+}
+@media screen and (max-width: 500px){
+    .contenedorservicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.25fr 3fr 0.1fr;
+        grid-template-areas: 
+        "gridencabezado"
+        "gridmenu"
+        "contenido"
+        "footer";
+    }
+    .gridcontenido{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr;
+        grid-template-areas: 
+        "titulo"
+        "video"
+        "lista";
+    }
+    .colordelalista{
+        font-size: 1.5rem;
+    }
+}
+.contenedorcontacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 2fr 0.1fr;
+    grid-template-areas:
+    "encabezado encabezado"
+    "navegador navegador"
+    "contenido contenido"
+    "footerc footerc";
+}
+.encabezadocontacto{
+    grid-area: encabezado;
+}
+.menucontacto{
+    grid-area: navegador;
+}
+.contenidocontacto{
+    grid-area: contenido;
+}
+.footercontacto{
+    grid-area: footerc;
+}
+
+/*galeria con Bootstrap*/
+
+.clasebody{
+    background-color: #000000;
+    font-family: "fuente";
+}
+.clasenut{
+    color: $colorprincipal;
+    font-size: 16rem;
+    background-size: 222px;
+}
+.fuentegaleria{
+    font-size: 5rem;
+    color: #000000;
+}
+.containergaleria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.negro{
+    text-decoration-line: none;
+}
+@media screen and (max-width: 768px){
+    .containergaleria{
+        height: 100%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    .navegadorgaleria{
+        padding: 0%;
+        margin: 0%;
+    }
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*Sumate a nut con bootstrap*/
+
+.fuentesumate{
+    font-size: 5rem;
+    color: #000000;
+}
+.sumateanut{
+    justify-content: center;
+}
+.botones{
+    text-align: center;
+}
+.sumateimagen img{
+    border-radius: 500px;
+    border-style:ridge;
+    border-color: $colorprincipal;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.clasebody{
+    color: $colorprincipal;
+    font-size: 2rem;
+}
+@media screen and (max-width: 500px){
+    .navegadorsumate{
+        padding: 0%;
+        margin: 0%;
+    }
+    .negro{
+        text-decoration: none;
+        margin: 0%;
+        padding: 0%;
+    }
+    li{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+.negro:hover{
+    color: black;
+}
+.piedepag3:hover{
+    color: blue;
+}
+.piedepag2:hover{
+    color: rgb(35, 255, 35);
+}
+.piedepag1:hover{
+    color: rgb(247, 38, 143);
+}
