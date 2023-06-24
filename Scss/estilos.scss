@@ -236,6 +236,32 @@ h2{
     height: 500px;
     display: inline-block;
 }
+.eventosdiv{
+    display: flex;
+    justify-content: space-around;
+}
+.eventos{
+    color: $colorprincipal;
+    font-size: 4rem;
+}
+.imagenesservicios{
+    display: flex;
+    width: 100%;
+    height: 60rem;
+    margin-bottom: 2rem;
+    img{
+        width: 0rem;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity:  .5;
+        transition: .5s ease;
+    &:hover{
+        cursor:ew-resize;
+        width: 30rem;
+        opacity: 1;
+        }
+    }
+}
 
 /* CONTACTO */
 
@@ -301,10 +327,18 @@ h6{
 .gridcontenido{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
     grid-template-areas: 
     "titulo titulo"
     "video lista"
+    "eventos eventos"
+    "fotosservicios fotosservicios";
+}
+.eventosdiv{
+    grid-area: eventos;
+}
+.imagenesservicios{
+    grid-area: fotosservicios;
 }
 .tituloservicios{
     grid-area: titulo ;
@@ -318,6 +352,7 @@ h6{
     grid-area: lista;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 768px ){
     .contenedorservicios{
@@ -331,11 +366,16 @@ h6{
     }
     .gridcontenido{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr 0.25fr 1fr;
         grid-template-areas: 
         "titulo"
         "video"
-        "lista";
+        "lista"
+        "eventos"
+        "fotosservicios";
+    }
+    .eventos{
+        font-size: 2rem;
     }
 }
 @media screen and (max-width: 500px){
@@ -350,14 +390,25 @@ h6{
     }
     .gridcontenido{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr 0.25fr 1fr;
         grid-template-areas: 
         "titulo"
         "video"
-        "lista";
+        "lista"
+        "eventos"
+        "fotosservicios";
     }
     .colordelalista{
         font-size: 1.5rem;
+    }
+    .eventos{
+        font-size: 2rem;
+    }
+    .eventosdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 .contenedorcontacto{

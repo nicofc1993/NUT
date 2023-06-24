@@ -240,6 +240,35 @@ h2 {
   display: inline-block;
 }
 
+.eventosdiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.eventos {
+  color: #b69121;
+  font-size: 4rem;
+}
+
+.imagenesservicios {
+  display: flex;
+  width: 100%;
+  height: 60rem;
+  margin-bottom: 2rem;
+}
+.imagenesservicios img {
+  width: 0rem;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+.imagenesservicios img:hover {
+  cursor: ew-resize;
+  width: 30rem;
+  opacity: 1;
+}
+
 /* CONTACTO */
 .cajamapa2 {
   top: 100px;
@@ -310,8 +339,16 @@ h6 {
 .gridcontenido {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr;
-  grid-template-areas: "titulo titulo" "video lista";
+  grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+  grid-template-areas: "titulo titulo" "video lista" "eventos eventos" "fotosservicios fotosservicios";
+}
+
+.eventosdiv {
+  grid-area: eventos;
+}
+
+.imagenesservicios {
+  grid-area: fotosservicios;
 }
 
 .tituloservicios {
@@ -328,6 +365,7 @@ h6 {
   grid-area: lista;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -338,8 +376,11 @@ h6 {
   }
   .gridcontenido {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr;
-    grid-template-areas: "titulo" "video" "lista";
+    grid-template-rows: 0.25fr 1fr 1fr 0.25fr 1fr;
+    grid-template-areas: "titulo" "video" "lista" "eventos" "fotosservicios";
+  }
+  .eventos {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -350,11 +391,20 @@ h6 {
   }
   .gridcontenido {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr;
-    grid-template-areas: "titulo" "video" "lista";
+    grid-template-rows: 0.25fr 1fr 1fr 0.25fr 1fr;
+    grid-template-areas: "titulo" "video" "lista" "eventos" "fotosservicios";
   }
   .colordelalista {
     font-size: 1.5rem;
+  }
+  .eventos {
+    font-size: 2rem;
+  }
+  .eventosdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .contenedorcontacto {
