@@ -33,10 +33,7 @@ nav{text-align: right;
         display: inline;
         .negro{
             color: black;
-            border-right: outset 0.4rem black;
-            border-bottom: outset 0.4rem black;
-            border-left: outset 0.4rem black;
-            border-top: outset 0.4rem black;
+            border: outset 0.4rem black;
         }
     }
     a{
@@ -74,7 +71,7 @@ H4{
     .textonut{
         color: $colortitulos;
         font-size: 2rem;
-        padding: 50px;
+        padding: 45px;
     }
     .textonut2{
         color: white;
@@ -153,7 +150,7 @@ footer{
 @media screen and (max-width: 500px){
     .contenedorpagina{
         grid-template-columns: 1fr; 
-        grid-template-rows: 0.25fr 0.2fr 0.8fr 0.8fr 0.25fr;
+        grid-template-rows: 0.25fr 0.2fr 1fr 0.8fr 0.25fr;
         grid-template-areas:
         "encabezado"
         "menu"
@@ -238,11 +235,25 @@ h2{
 }
 .eventosdiv{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    
 }
 .eventos{
-    color: $colorprincipal;
+    width: 100%;
     font-size: 4rem;
+    background-color: $colorprincipal;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.eventos--invertido{
+    @extend .eventos;
+    background-color: #000000;
+    color: $colorprincipal;
 }
 .imagenesservicios{
     display: flex;
