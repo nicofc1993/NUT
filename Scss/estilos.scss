@@ -1,5 +1,14 @@
 @import "variables";
 
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexsinaling{
+    display: flex;
+    justify-content: center;
+}
 html{
     font-size: 62.5%;
 }
@@ -57,9 +66,7 @@ H4{
     overflow: hidden;
     margin-left: 30%;
     div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
     }
     h3{
         font-size: 7rem;
@@ -218,8 +225,7 @@ footer{
     color: #b69121;
     font-size: 3rem;
     .serv{
-        display: flex;
-        justify-content: center;
+        @include flexsinaling;
     }
 }
 h2{
@@ -296,8 +302,7 @@ h2{
     color: $colortitulos;
 }
 .cajamapa{
-    display: flex;
-    justify-content: center;
+    @include flexsinaling;
     width: 100%;
     background-color: #000000;
     padding-bottom: 2rem;
@@ -356,14 +361,11 @@ h6{
 }
 .videonut{
     grid-area: video;
-    display: flex;
-    justify-content: center;
+    @include flexsinaling;
 }
 .listanut{
     grid-area: lista;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
 }
 @media screen and (max-width: 768px ){
     .contenedorservicios{
@@ -461,9 +463,7 @@ h6{
     color: #000000;
 }
 .containergaleria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     height: 100%;
 }
 .negro{
@@ -481,9 +481,7 @@ h6{
         margin: 0%;
     }
     article{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
     }
 }
 
