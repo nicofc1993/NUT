@@ -455,11 +455,11 @@ h6{
 .clasebody{
     background-color: #000000;
     font-family: "fuente";
-}
-.clasenut{
-    color: $colorprincipal;
-    font-size: 16rem;
-    background-size: 222px;
+    .clasenut{
+        color: $colorprincipal;
+        font-size: 16rem;
+        background-size: 222px;
+    }
 }
 .fuentegaleria{
     font-size: 5rem;
@@ -471,6 +471,15 @@ h6{
 }
 .negro{
     text-decoration-line: none;
+}
+.containergaleria2{
+    @include flex;
+    flex-direction: column;
+    .bg-dark{
+        opacity:0.8;
+        text-align: center;
+        @include flex;
+    }
 }
 @media screen and (max-width: 768px){
     .containergaleria{
@@ -485,6 +494,9 @@ h6{
     }
     article{
         @include flex;
+    }
+    .card-text{
+        font-size: 10px;
     }
 }
 

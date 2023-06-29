@@ -448,8 +448,7 @@ h6 {
   background-color: #000000;
   font-family: "fuente";
 }
-
-.clasenut {
+.clasebody .clasenut {
   color: #b69121;
   font-size: 16rem;
   background-size: 222px;
@@ -471,6 +470,20 @@ h6 {
   text-decoration-line: none;
 }
 
+.containergaleria2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containergaleria2 .bg-dark {
+  opacity: 0.8;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .containergaleria {
     height: 100%;
@@ -486,6 +499,9 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .card-text {
+    font-size: 10px;
   }
 }
 /*Sumate a nut con bootstrap*/
