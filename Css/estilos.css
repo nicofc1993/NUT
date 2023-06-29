@@ -137,9 +137,6 @@ footer .piedepag {
 
 /*grid -- tamaño tablet - 768px y tamaño celular 500px INICIO*/
 .contenedorpagina {
-  background-image: url(../Imagenes/fondo\ comprimido.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.25fr 0.25fr 2fr 0.1fr;
